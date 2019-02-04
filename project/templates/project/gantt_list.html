@@ -1,0 +1,8 @@
+<h2>Gantts by Project </h2>
+<h4>{{ project.name }}</h4>
+    <ul>
+        {% for gantt in object_list %}
+            <li>{{ gantt.report_date }} <a href="/{{gantt.project_id}}">   ver más reciente</a></li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'project:list'%}">Atras</a></p>

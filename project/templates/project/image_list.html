@@ -1,0 +1,9 @@
+<h2>Images by Project </h2>
+<h4>{{ project.name }}</h4>
+<!-- Home Main Image -->
+    <ul>
+        {% for image in object_list %}
+            <li>{{ image.list_date }} </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'project:list'%}">Atras</a></p>

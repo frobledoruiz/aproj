@@ -1,0 +1,9 @@
+<!--Lista de Proyectos Main Page-->
+<h2>Projects</h2>
+
+    <ul>
+        {% for project in object_list %}
+            <li><a href="project/{{ project.name }}"> {{ project.name }}</a> </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'project:list'%}">Atras</a></p>
