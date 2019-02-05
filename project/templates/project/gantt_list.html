@@ -1,4 +1,6 @@
-<h2>Gantts by Project </h2>
+{% extends 'base.html' %}
+{% block content %}
+<h2>List of Gantts by Project </h2>
 <h4>{{ project.name }}</h4>
     <ul>
         {% for gantt in object_list %}
@@ -6,3 +8,5 @@
         {% endfor %}
     </ul>
     <p><a href="{% url 'project:list'%}">Atras</a></p>
+
+{% endblock content %}

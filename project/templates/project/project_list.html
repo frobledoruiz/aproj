@@ -1,9 +1,18 @@
-<!--Lista de Proyectos Main Page-->
-<h2>Projects</h2>
-
-    <ul>
-        {% for project in object_list %}
+{% extends 'base.html' %}
+{% block content %}
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+    <div class="container">
+        <h2>List of Projects</h2>
+        <ul>
+            {% for project in object_list %}
             <li><a href="project/{{ project.name }}"> {{ project.name }}</a> </li>
-        {% endfor %}
-    </ul>
-    <p><a href="{% url 'project:list'%}">Atras</a></p>
+            {% endfor %}
+        </ul>
+        <p><a href="{% url 'project:list'%}">Atras</a></p>
+    </div>
+
+</main>
+
+
+
+{% endblock content %}
